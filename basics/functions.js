@@ -1,7 +1,7 @@
 function updatetrain(obj) 
 {
     // Mutating the object is visible outside the function
-    obj.type = "express";
+    train.type = "express";
     // Try to reassign the parameter, but this won't affect
     // the variable's value outside the function
     obj = null;
@@ -9,14 +9,16 @@ function updatetrain(obj)
   
   const train = {
     type: "mail",
-    trainNo: "Accord",
+    trainNo: "12013",
     station: "Amritsar"
   };
   
   console.log(train.type); // express
   
   // Pass object reference to the function
-  updatetrain(train.type);
+  updatetrain();
   
   // updatetype mutates train
   console.log(train.station); // Amritsar
+  console.log(train.trainNo);//12013
+  console.log(train.type);//express after executing function
